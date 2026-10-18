@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102846">
+    <meta name="description" content="Manage Pacific Realty property listings and review owner activity.">
+    <title>Owner dashboard — Pacific Realty Solutions LTD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+  <body class="owner-page">
+    <header class="auth-header">
+      <a class="brand" href="../" aria-label="Pacific Realty Solutions LTD home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M4 16.2 18 5l14 11.2v14.3H21.4v-9.7h-6.8v9.7H4V16.2Z" fill="currentColor"/><path d="M25.2 6.8h4.2v7.1" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+        <span class="brand-name">Pacific Realty <span>Solutions LTD</span></span>
+        <img class="brand-logo" src="../assets/pacific-realty-logo.png" alt="">
+      </a>
+      <div class="owner-header-actions">
+        <a class="auth-back-link" href="../">View public site</a>
+        <button class="profile-sign-out" type="button" data-sign-out hidden>Sign out</button>
+      </div>
+    </header>
+    <main class="owner-main" id="owner-dashboard" hidden>
+      <section class="owner-heading">
+        <p class="eyebrow">OWNER ACCESS</p>
+        <h1>Property dashboard</h1>
+        <p>Manage published homes and review recent listing changes.</p>
+      </section>
+      <div class="owner-layout">
+        <section class="owner-panel" aria-labelledby="listing-form-title">
+          <form id="listing-form" class="owner-form">
+            <input type="hidden" name="id">
+            <h2 id="listing-form-title">Add a listing</h2>
+            <label>Property title<input name="title" type="text" required maxlength="180"></label>
+            <div class="owner-form-row">
+              <label>Property type
+                <select name="property_type" required>
+                  <option value="">Choose type</option>
+                  <option>Apartment</option>
+                  <option>Detached house</option>
+                  <option>Terrace</option>
+                  <option>Land</option>
+                </select>
+              </label>
+              <label>Listing category
+                <select name="transaction_type" required>
+                  <option value="">Choose category</option>
+                  <option value="Buy">For sale</option>
+                  <option value="Rent">For rent</option>
+                  <option value="Short Let">Short let</option>
+                  <option value="Land">Land for sale</option>
+                </select>
+              </label>
+            </div>
+            <label>Location<input name="location" type="text" required maxlength="180" placeholder="e.g. Lekki Phase 1, Lagos"></label>
+            <div class="owner-form-row">
+              <label>Price (NGN)<input name="price" type="number" min="1" step="0.01" required></label>
+              <label>Bedrooms<input name="bedrooms" type="number" min="0" step="1" value="0" required></label>
+            </div>
+            <label>Image URL<input name="image_url" type="url" required placeholder="https://example.com/property.jpg"></label>
+            <label>Description<textarea name="description" rows="4" maxlength="4000"></textarea></label>
+            <label class="owner-publish-toggle"><input name="is_published" type="checkbox" checked> Publish this listing</label>
+            <div class="owner-form-actions">
+              <button class="auth-submit" type="submit">Create listing</button>
+              <button class="owner-action" type="button" id="cancel-edit">Clear form</button>
+            </div>
+          </form>
+        </section>
+        <section class="owner-panel owner-activity-panel" aria-labelledby="activity-title">
+          <h2 id="activity-title">Recent activity</h2>
+          <p class="owner-panel-intro">Latest listing creations, edits, and deletions.</p>
+          <ol id="owner-activity" class="owner-activity"></ol>
+        </section>
+      </div>
+      <section class="owner-panel owner-listings-panel" aria-labelledby="owner-listings-title">
+        <h2 id="owner-listings-title">Your listings</h2>
+        <div class="owner-table-scroll">
+          <table class="owner-table">
+            <thead><tr><th>Property</th><th>Location</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="owner-listings"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <p id="owner-loading" class="owner-loading" role="status">Checking owner access…</p>
+    <p id="owner-message" class="owner-message account-message" role="status" aria-live="polite" hidden></p>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../supabase-config.js"></script>
+    <script src="../supabase-client.js"></script>
+    <script src="../account.js"></script>
+    <script src="../owner.js"></script>
+  </body>
+</html>
