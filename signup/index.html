@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102846">
+    <meta name="description" content="Create a Pacific Realty Solutions LTD account.">
+    <title>Create an account — Pacific Realty Solutions LTD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+  <body class="auth-page">
+    <header class="auth-header">
+      <a class="brand" href="../" aria-label="Pacific Realty Solutions LTD home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M4 16.2 18 5l14 11.2v14.3H21.4v-9.7h-6.8v9.7H4V16.2Z" fill="currentColor"/><path d="M25.2 6.8h4.2v7.1" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+        <span class="brand-name">Pacific Realty <span>Solutions LTD</span></span>
+        <img class="brand-logo" src="../assets/pacific-realty-logo.png" alt="">
+      </a>
+      <a class="auth-back-link" href="../">← Back to homes</a>
+    </header>
+    <main class="auth-main">
+      <section class="auth-card" aria-labelledby="signup-title">
+        <div class="auth-logo-lockup"><img src="../assets/pacific-realty-logo.png" alt="Pacific Realty Solutions LTD"></div>
+        <p class="eyebrow auth-eyebrow">A BETTER WAY TO FIND HOME</p>
+        <h1 id="signup-title">Create your account</h1>
+        <p class="auth-intro">Save properties and keep track of homes you love. We’ll email you a link to verify your account.</p>
+        <form id="signup-form" class="auth-form">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required minlength="8">
+          <button class="auth-submit" type="submit">Create account</button>
+        </form>
+        <p class="account-message" role="status" aria-live="polite" hidden></p>
+        <p class="auth-switch">Already have an account? <a href="../login/">Sign in</a></p>
+        <p class="prototype-note">Your password is securely managed by Supabase. New accounts start with user access.</p>
+      </section>
+      <p class="auth-footnote">Find a place to call yours.</p>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../supabase-config.js"></script>
+    <script src="../supabase-client.js"></script>
+    <script src="../account.js"></script>
+  </body>
+</html>
