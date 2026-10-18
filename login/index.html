@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102846">
+    <meta name="description" content="Sign in to your Pacific Realty Solutions LTD account.">
+    <title>Sign in — Pacific Realty Solutions LTD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+  <body class="auth-page login-page">
+    <header class="auth-header">
+      <a class="brand" href="../" aria-label="Pacific Realty Solutions LTD home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M4 16.2 18 5l14 11.2v14.3H21.4v-9.7h-6.8v9.7H4V16.2Z" fill="currentColor"/><path d="M25.2 6.8h4.2v7.1" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+        <span class="brand-name">Pacific Realty <span>Solutions LTD</span></span>
+        <img class="brand-logo" src="../assets/pacific-realty-logo.png" alt="">
+      </a>
+      <a class="auth-back-link" href="../">← Back to homes</a>
+    </header>
+    <main class="auth-main">
+      <div class="login-layout">
+        <section class="login-showcase" aria-label="Find your place with Pacific Realty">
+          <img src="../assets/property-exterior-2.png" alt="Modern residential development in Lagos">
+          <div class="login-showcase-shade"></div>
+          <div class="login-showcase-top"><span class="showcase-mark" aria-hidden="true">P</span><span>YOUR NEXT CHAPTER</span></div>
+          <div class="login-showcase-copy">
+            <p class="eyebrow">A PLACE THAT FEELS LIKE YOU</p>
+            <h2>Come home to<br><em>something better.</em></h2>
+            <p>Thoughtfully chosen homes. A more personal way to find yours.</p>
+          </div>
+          <div class="login-showcase-caption"><span class="showcase-caption-dot"></span> Lekki, Lagos <span class="showcase-caption-divider">/</span> Find a place to call yours</div>
+        </section>
+        <section class="auth-card" aria-labelledby="login-title">
+          <div class="auth-logo-lockup"><img src="../assets/pacific-realty-logo.png" alt="Pacific Realty Solutions LTD"></div>
+          <p class="eyebrow auth-eyebrow">WELCOME BACK</p>
+          <h1 id="login-title">Sign in to your account</h1>
+          <p class="auth-intro">Access your saved homes and property updates.</p>
+          <form id="login-form" class="auth-form">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="8">
+            <button class="auth-submit" type="submit">Sign in</button>
+          </form>
+          <p class="account-message" role="status" aria-live="polite" hidden></p>
+          <p class="auth-switch">New to Pacific Realty? <a href="../signup/">Create an account</a></p>
+        </section>
+      </div>
+      <p class="auth-footnote">A little closer to home.</p>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../supabase-config.js"></script>
+    <script src="../supabase-client.js"></script>
+    <script src="../account.js"></script>
+  </body>
+</html>
