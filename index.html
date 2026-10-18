@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102846">
+    <meta name="description" content="Find verified homes, short lets, new projects and land for sale or rent across Nigeria with Pacific Realty Solutions LTD.">
+    <title>Pacific Realty Solutions LTD — Find a place to call yours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Pacific Realty Solutions LTD home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none"><path d="M4 16.2 18 5l14 11.2v14.3H21.4v-9.7h-6.8v9.7H4V16.2Z" fill="currentColor"/><path d="M25.2 6.8h4.2v7.1" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-name">Pacific Realty <span>Solutions LTD</span></span>
+        <img class="brand-logo" src="assets/pacific-realty-logo.png" alt="Pacific Realty Solutions LTD logo">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#recent" data-search-mode="Buy">Buy</a>
+        <a href="#recent" data-search-mode="Rent">Rent</a>
+        <a href="#recent" data-search-mode="Short Let">Short Let</a>
+        <a href="#land" data-search-mode="Land">Land</a>
+        <a href="#consultation">Book a consultation</a>
+      </nav>
+      <div class="header-actions">
+        <a class="sign-in" id="account-link" href="login/">Sign in</a>
+        <button class="sign-out-button" id="sign-out-button" type="button" data-sign-out hidden>Sign out</button>
+        <a class="list-property" href="#footer">List your property <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow"><span></span> YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1 id="hero-title">Find a place<br>to call <em>yours.</em></h1>
+          <p class="hero-copy">Discover homes, spaces and land across Nigeria.</p>
+          <div class="search-panel">
+            <div class="search-tabs" role="tablist" aria-label="Listing category">
+              <button class="search-tab active" role="tab" aria-selected="true" data-mode="Buy">Buy</button>
+              <button class="search-tab" role="tab" aria-selected="false" data-mode="Rent">Rent</button>
+              <button class="search-tab" role="tab" aria-selected="false" data-mode="Short Let">Short Let</button>
+              <button class="search-tab" role="tab" aria-selected="false" data-mode="Land">Land</button>
+            </div>
+            <form id="property-search" class="search-fields">
+              <label class="field location-field">
+                <span class="field-label">Location</span>
+                <span class="input-wrap"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 8.3c0 4.4-6 9-6 9s-6-4.6-6-9a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg><input id="location" type="search" placeholder="City, neighbourhood or state"></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Property type</span>
+                <select id="property-type"><option value="">Any type</option><option>Apartment</option><option>Detached house</option><option>Terrace</option><option>Land</option></select>
+              </label>
+              <label class="field bedroom-field">
+                <span class="field-label">Bedrooms</span>
+                <select id="bedrooms"><option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select>
+              </label>
+              <label class="field price-field">
+                <span class="field-label">Min. price</span>
+                <select id="min-price"><option value="">No min</option><option value="50000000">₦50m</option><option value="100000000">₦100m</option><option value="200000000">₦200m</option><option value="500000000">₦500m</option></select>
+              </label>
+              <label class="field price-field">
+                <span class="field-label">Max. price</span>
+                <select id="max-price"><option value="">No max</option><option value="100000000">₦100m</option><option value="200000000">₦200m</option><option value="500000000">₦500m</option><option value="1000000000">₦1bn</option></select>
+              </label>
+              <button class="search-button" type="submit"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.7" cy="8.7" r="5.5"/><path d="m13 13 4 4"/></svg><span>Search</span></button>
+            </form>
+          </div>
+          <p class="trust-note"><span class="check-icon">✓</span> Find your place with confidence <span class="dot">·</span> Listings across Nigeria</p>
+        </div>
+        <div class="hero-caption"><span class="caption-rule"></span> A quieter kind of city living <span class="caption-location">Lekki, Lagos</span></div>
+      </section>
+
+      <section class="quick-links content-width" aria-label="Explore by category">
+        <a href="#recent" class="quick-link" data-search-mode="Buy"><span class="quick-icon blue"><svg viewBox="0 0 24 24"><path d="m3 11 9-7 9 7v9h-6v-6H9v6H3v-9Z"/></svg></span><span><strong>Homes for sale</strong><small>Find your forever home</small></span><span class="quick-arrow">↗</span></a>
+        <a href="#recent" class="quick-link" data-search-mode="Rent"><span class="quick-icon violet"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-5 8 5v12M8 20v-6h8v6M8 9h.01M12 9h.01M16 9h.01"/></svg></span><span><strong>Homes to rent</strong><small>Make yourself at home</small></span><span class="quick-arrow">↗</span></a>
+        <a href="#recent" class="quick-link" data-search-mode="Short Let"><span class="quick-icon orange"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-6 8 6v11M8 20v-6h8v6M9 10h.01M15 10h.01"/></svg></span><span><strong>Short lets</strong><small>Stay awhile, your way</small></span><span class="quick-arrow">↗</span></a>
+        <a href="#land" class="quick-link" data-search-mode="Land"><span class="quick-icon green"><svg viewBox="0 0 24 24"><path d="M3 19 9 8l4 6 3-4 5 9H3ZM5 19h14"/></svg></span><span><strong>Land for sale</strong><small>Build what comes next</small></span><span class="quick-arrow">↗</span></a>
+      </section>
+
+      <section class="listing-section content-width" id="recent">
+        <div class="section-heading">
+          <div><p class="eyebrow">HAND-PICKED FOR YOU</p><h2>Recent listings</h2><p class="section-copy">Fresh finds in the neighbourhoods you love.</p></div>
+          <a href="listings.html" class="view-all">Explore all listings <span>↗</span></a>
+        </div>
+        <div class="property-grid" data-public-listings>
+          <article class="property-card" data-mode="Buy" data-type="Apartment" data-bedrooms="1" data-price="130000000" data-location="Ikate Lekki Lagos">
+            <a class="property-image" href="#recent" aria-label="View The Pearl Lagos development in Ikate, Lekki"><img src="assets/property-exterior-2.png" alt="The Pearl Lagos development with green landscaping in front" loading="lazy"><span class="image-tag">NEW PROJECT</span><button class="save-button" aria-label="Save property">♡</button></a>
+            <div class="property-info"><div class="price-line"><strong>From ₦130,000,000</strong><span class="verified"><i>✓</i> Verified</span></div><h3>The Pearl Lagos — 3rd decking reached</h3><p class="property-location"><svg viewBox="0 0 20 20"><path d="M16 8.3c0 4.4-6 9-6 9s-6-4.6-6-9a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg>Ikate, Lekki</p><div class="property-meta"><span>1–2 bedrooms</span><b></b><span>Maisonettes</span></div><details class="property-details"><summary>View project details</summary><p class="project-description">The vision is coming to life at Ikate, Lekki. Few units left in this phase.</p><ul><li>1-bedroom apartment: from ₦130M outright</li><li>2-bedroom apartment: from ₦200M outright</li><li>2-bedroom maisonette: from ₦220M outright</li><li>Early-bird pricing available</li><li>Visible construction progress — see the site</li><li>Scheduled delivery: Q1 2027</li><li>High-demand Lekki location</li><li>Payment plans available</li><li>Site inspections: Monday–Saturday</li></ul></details></div>
+          </article>
+          <article class="property-card" data-mode="Buy" data-type="Apartment" data-bedrooms="2" data-price="270000000" data-location="Lekki Phase 1 Lagos">
+            <a class="property-image" href="#recent" aria-label="View brand new two bedroom apartment with BQ in Lekki Phase 1"><img src="assets/property-exterior-1.png" alt="Contemporary multi-storey property with a paved driveway" loading="lazy"><span class="image-tag">FOR SALE</span><button class="save-button" aria-label="Save property">♡</button></a>
+            <div class="property-info"><div class="price-line"><strong>₦270,000,000 <small>asking</small></strong><span class="verified"><i>✓</i> Verified</span></div><h3>Brand-new spacious 2-bedroom apartment with BQ</h3><p class="property-location"><svg viewBox="0 0 20 20"><path d="M16 8.3c0 4.4-6 9-6 9s-6-4.6-6-9a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg>Lekki Phase 1, Lagos</p><div class="property-meta"><span>2 beds</span><b></b><span>BQ</span><b></b><span>Only 2 in compound</span></div><details class="property-details"><summary>View property features</summary><ul><li>Only two apartments in the compound</li><li>Ample parking: space for up to four cars per apartment</li><li>Spacious living area</li><li>Treated, clean water</li><li>Perfect for short lets</li><li>Fully fitted kitchen</li><li>Spacious boys' quarter (BQ)</li><li>Two balconies and a sit-out area</li></ul></details></div>
+          </article>
+          <article class="property-card" data-mode="Buy" data-type="Detached house" data-bedrooms="5" data-price="380000000" data-location="Chevron Lekki Lagos">
+            <a class="property-image" href="#recent" aria-label="View luxury five bedroom smart home in Chevron, Lekki"><img src="assets/property-exterior-3.png" alt="Contemporary white luxury home with a large paved frontage" loading="lazy"><span class="image-tag">FOR SALE</span><button class="save-button" aria-label="Save property">♡</button></a>
+            <div class="property-info"><div class="price-line"><strong>₦380,000,000</strong><span class="verified"><i>✓</i> Verified</span></div><h3>Luxury 5-bedroom smart home with pool &amp; BQ</h3><p class="property-location"><svg viewBox="0 0 20 20"><path d="M16 8.3c0 4.4-6 9-6 9s-6-4.6-6-9a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg>Chevron, Lekki</p><div class="property-meta"><span>5 beds</span><b></b><span>Swimming pool</span><b></b><span>BQ</span></div><details class="property-details"><summary>View property features</summary><ul><li>Flawless finishing and modern luxury fittings</li><li>Ample parking space</li><li>Statement lighting, TV consoles</li><li>Spacious living and dining areas, family lounge</li><li>Balconies and beautifully carved walk-in closet</li><li>Smart home features and automatic lock</li><li>Fully fitted kitchen and integrated sound system</li><li>Luxury sanitary wares and quality woodwork</li><li>Swimming pool and greenery</li><li>Boy's quarter (BQ)</li><li>Secure access control in a gated estate</li><li>Fantastic neighbourhood</li></ul></details></div>
+          </article>
+          <article class="property-card" data-mode="Buy" data-type="Apartment" data-bedrooms="2" data-price="73699354.79" data-location="Okun Alfa Lekki Lagos">
+            <a class="property-image" href="#recent" aria-label="View Ashbell Apartments in Okun Alfa, Lekki"><img src="assets/ashbell-apartments.png" alt="Ashbell Apartments secured mini estate with landscaped compound" loading="lazy"><span class="image-tag">FOR SALE</span><button class="save-button" aria-label="Save property">♡</button></a>
+            <div class="property-info"><div class="price-line"><strong>₦73,699,354.79</strong><span class="verified"><i>✓</i> Verified</span></div><h3>Ashbell Apartments — 2-bedroom maisonette</h3><p class="property-location"><svg viewBox="0 0 20 20"><path d="M16 8.3c0 4.4-6 9-6 9s-6-4.6-6-9a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg>Okun Alfa, off Alpha Beach Road, Lekki</p><div class="property-meta"><span>2 beds</span><b></b><span>Maisonette</span><b></b><span>C of O</span></div><details class="property-details"><summary>View property features</summary><ul><li>Modern architecture and detailed finishing</li><li>24-hour security with armed guards</li><li>Stable electricity</li><li>Gorgeous lighting and modern luxury fittings</li><li>Top-quality fitted kitchen and luxury sanitary wares</li><li>Spacious bedrooms and ample parking</li><li>Safe stairways and quality woodwork</li><li>Secured mini estate with over 40 planted shrubs and trees</li><li>Gym, mini mart, creche and play areas proposed for the estate</li><li>Title: Certificate of Occupancy (C of O)</li><li>Great neighbourhood</li></ul></details></div>
+          </article>
+          <article class="property-card land-result" data-mode="Land" data-type="Land" data-bedrooms="0" data-price="25000000" data-location="Epe Lagos">
+            <a class="property-image" href="#land" aria-label="View residential land in Epe"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Open green land ready for development" loading="lazy"><span class="image-tag tag-land">LAND FOR SALE</span><button class="save-button" aria-label="Save property">♡</button></a>
+            <div class="property-info"><div class="price-line"><strong>₦25,000,000</strong><span class="verified"><i>✓</i> Verified</span></div><h3>Residential plot in a growing community</h3><p class="property-location"><svg viewBox="0 0 20 20"><path d="M16 8.3c0 4.4-6 9-6 9s-6-4.6-6-9a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg>Epe, Lagos</p><div class="property-meta"><span>Residential</span><b></b><span>Serviced estate</span></div></div>
+          </article>
+        </div>
+        <p class="listing-load-error" data-listings-error hidden>Some additional listings could not be loaded right now.</p>
+        <p class="empty-state" hidden>No listings match those filters yet. Try adjusting your search.</p>
+      </section>
+
+      <section class="video-homes-section" id="homes-with-videos" aria-labelledby="video-homes-title">
+        <div class="content-width">
+          <div class="section-heading">
+            <div><p class="eyebrow">TAKE A CLOSER LOOK</p><h2 id="video-homes-title">Homes with videos</h2><p class="section-copy">Ask our team for a video tour of any home that catches your eye.</p></div>
+            <a class="view-all" href="mailto:pacificrealtysolutionltd@gmail.com?subject=Property%20video%20tours">Request a video tour <span>↗</span></a>
+          </div>
+          <div class="video-homes-grid">
+            <article class="video-home-card">
+              <video class="video-home-player" controls playsinline preload="metadata" aria-label="Featured home video tour">
+                <source src="assets/featured-home-tour.mp4" type="video/mp4">
+                Your browser does not support HTML video. Please try another browser to watch this tour.
+              </video>
+              <button class="video-sound-toggle" type="button" aria-label="Mute sound" aria-pressed="true">Mute sound</button>
+              <div class="video-home-info"><p class="video-home-type">FEATURED VIDEO TOUR</p><h3>Explore this home</h3><p class="video-home-location">Watch the property video above.</p><a href="mailto:pacificrealtysolutionltd@gmail.com?subject=Enquiry%20about%20the%20featured%20home%20video">Ask us about this home <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="video-home-card">
+              <video class="video-home-player" controls playsinline preload="metadata" aria-label="Second featured home video tour">
+                <source src="assets/featured-home-tour-2.mp4" type="video/mp4">
+                Your browser does not support HTML video. Please try another browser to watch this tour.
+              </video>
+              <button class="video-sound-toggle" type="button" aria-label="Mute sound" aria-pressed="true">Mute sound</button>
+              <div class="video-home-info"><p class="video-home-type">FEATURED VIDEO TOUR</p><h3>Explore another home</h3><p class="video-home-location">This video has no audio track.</p><a href="mailto:pacificrealtysolutionltd@gmail.com?subject=Enquiry%20about%20the%20second%20featured%20home%20video">Ask us about this home <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="video-home-card">
+              <video class="video-home-player" controls playsinline preload="metadata" aria-label="Third featured home video tour">
+                <source src="assets/featured-home-tour-3.mp4" type="video/mp4">
+                Your browser does not support HTML video. Please try another browser to watch this tour.
+              </video>
+              <button class="video-sound-toggle" type="button" aria-label="Mute sound" aria-pressed="true">Mute sound</button>
+              <div class="video-home-info"><p class="video-home-type">FEATURED VIDEO TOUR</p><h3>Explore another property</h3><p class="video-home-location">This video has no audio track.</p><a href="mailto:pacificrealtysolutionltd@gmail.com?subject=Enquiry%20about%20the%20third%20featured%20home%20video">Ask us about this home <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="video-home-card">
+              <video class="video-home-player" controls playsinline preload="metadata" aria-label="Fourth featured home video tour">
+                <source src="assets/featured-home-tour-4.mp4" type="video/mp4">
+                Your browser does not support HTML video. Please try another browser to watch this tour.
+              </video>
+              <button class="video-sound-toggle" type="button" aria-label="Mute sound" aria-pressed="true">Mute sound</button>
+              <div class="video-home-info"><p class="video-home-type">FEATURED VIDEO TOUR</p><h3>Explore another home</h3><p class="video-home-location">Audio available — use the video controls.</p><a href="mailto:pacificrealtysolutionltd@gmail.com?subject=Enquiry%20about%20the%20fourth%20featured%20home%20video">Ask us about this home <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="video-home-card">
+              <img src="assets/property-exterior-3.png" alt="Luxury five-bedroom smart home in Chevron, Lekki" loading="lazy">
+              <div class="video-home-info"><p class="video-home-type">FOR SALE · CHEVRON, LEKKI</p><h3>Luxury 5-bedroom smart home</h3><p class="video-home-location">Swimming pool and boys' quarter</p><strong>₦380,000,000</strong><a href="mailto:pacificrealtysolutionltd@gmail.com?subject=Video%20tour%20request%3A%20Chevron%20smart%20home">Request video tour <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="video-home-card">
+              <img src="assets/ashbell-apartments.png" alt="Ashbell Apartments in Okun Alfa, Lekki" loading="lazy">
+              <div class="video-home-info"><p class="video-home-type">FOR SALE · OKUN ALFA, LEKKI</p><h3>Ashbell Apartments</h3><p class="video-home-location">2-bedroom maisonette · C of O</p><strong>₦73,699,354.79</strong><a href="mailto:pacificrealtysolutionltd@gmail.com?subject=Video%20tour%20request%3A%20Ashbell%20Apartments">Request video tour <span aria-hidden="true">↗</span></a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-section">
+        <div class="content-width">
+          <div class="section-heading">
+            <div><p class="eyebrow">A PLACE TO GROW</p><h2>New projects</h2><p class="section-copy">Explore considered communities and homes in the making.</p></div>
+            <a href="#projects" class="view-all" id="projects">Discover new projects <span>↗</span></a>
+          </div>
+          <div class="project-feature">
+            <div class="project-photo"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=85" alt="Modern residential development with a landscaped courtyard" loading="lazy"><span class="project-label">FEATURED DEVELOPMENT</span></div>
+            <div class="project-detail"><p class="project-location">LEKKI, LAGOS</p><h3>The Courtyard Residences</h3><p>A collection of light-filled homes with thoughtful details, green spaces and room to make your own.</p><div class="project-bottom"><span>From <strong>₦95,000,000</strong></span><a href="#projects" aria-label="Discover The Courtyard Residences">↗</a></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="listing-section content-width" id="luxury">
+        <div class="section-heading">
+          <div><p class="eyebrow">EXTRAORDINARY, EVERY DAY</p><h2>Luxury listings</h2><p class="section-copy">Exceptional spaces, in the right places.</p></div>
+          <a href="#luxury" class="view-all">View luxury homes <span>↗</span></a>
+        </div>
+        <div class="luxury-grid">
+          <a class="luxury-card" href="#luxury"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Refined contemporary home with an open-plan living space" loading="lazy"><span class="luxury-overlay"><small>IKOYI, LAGOS</small><strong>Private residences, reimagined</strong><span>From ₦850,000,000 <i>↗</i></span></span></a>
+          <a class="luxury-card" href="#luxury"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85" alt="Luxury home framed by a lush tropical garden" loading="lazy"><span class="luxury-overlay"><small>ASOKORO, ABUJA</small><strong>Room for a slower pace</strong><span>From ₦620,000,000 <i>↗</i></span></span></a>
+        </div>
+      </section>
+
+      <section class="land-section" id="land">
+        <div class="content-width land-inner land-inner-text-only">
+          <div class="land-copy"><p class="eyebrow">MAKE ROOM FOR WHAT'S NEXT</p><h2>Start with a<br>piece of land.</h2><p>Find the right ground to build your plans on, from established neighbourhoods to emerging communities.</p><a href="#land" class="land-cta" data-search-mode="Land">Explore land for sale <span>↗</span></a></div>
+        </div>
+      </section>
+      <section class="why-choose" aria-labelledby="why-choose-title">
+        <div class="content-width">
+          <div class="why-heading"><p class="eyebrow">HERE FOR YOUR NEXT MOVE</p><h2 id="why-choose-title">Why choose us</h2></div>
+          <div class="why-items">
+            <a class="why-item" href="#recent"><span class="why-icon" aria-hidden="true">✓</span><span class="why-content"><h3>Find with confidence</h3><span class="why-description">Explore carefully presented listings to help you make a more informed move.</span><span class="why-action">Browse listings <span aria-hidden="true">↗</span></span></span></a>
+            <a class="why-item" href="#land"><span class="why-icon" aria-hidden="true">⌖</span><span class="why-content"><h3>Local knowledge</h3><span class="why-description">Discover homes, projects and land in sought-after neighbourhoods across Nigeria.</span><span class="why-action">Explore land <span aria-hidden="true">↗</span></span></span></a>
+            <a class="why-item" href="mailto:pacificrealtysolutionltd@gmail.com?subject=Property%20enquiry"><span class="why-icon" aria-hidden="true">♡</span><span class="why-content"><h3>People-first service</h3><span class="why-description">Get clear information and helpful support as you find a place to call yours.</span><span class="why-action">Contact our team <span aria-hidden="true">↗</span></span></span></a>
+          </div>
+        </div>
+      </section>
+      <section class="consultation-section" id="consultation" aria-labelledby="consultation-title">
+        <div class="content-width consultation-layout">
+          <div class="consultation-copy">
+            <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+            <h2 id="consultation-title">Let's start a conversation</h2>
+            <p>Whether you're buying your first home, investing, or simply curious about our developments, our team is ready to guide you.</p>
+            <div class="consultation-contact"><span>OFFICE</span><p>Lagos, Nigeria — Lekki Axis</p></div>
+            <div class="consultation-contact"><span>EMAIL</span><a href="mailto:pacificrealtysolutionltd@gmail.com">pacificrealtysolutionltd@gmail.com</a></div>
+            <div class="consultation-contact"><span>PHONE</span><a href="tel:+2347065239666">0706 523 9666</a></div>
+          </div>
+          <form class="consultation-form" id="consultation-form">
+            <div class="consultation-fields">
+              <label>First name<input name="firstName" type="text" autocomplete="given-name" placeholder="Your first name" maxlength="100" required></label>
+              <label>Last name<input name="lastName" type="text" autocomplete="family-name" placeholder="Your last name" maxlength="100" required></label>
+              <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@email.com" maxlength="254" required></label>
+              <label>Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="+234 ..." maxlength="40" required></label>
+              <label class="consultation-wide">Interest
+                <select name="interest" required>
+                  <option value="Buying a property">Buying a property</option>
+                  <option value="Renting a property">Renting a property</option>
+                  <option value="Short let">Short let</option>
+                  <option value="Land">Land</option>
+                  <option value="Investment">Investment</option>
+                  <option value="Other enquiry">Other enquiry</option>
+                </select>
+              </label>
+              <label class="consultation-wide">Message<textarea name="message" rows="4" maxlength="4000" placeholder="Tell us what you're looking for..." required></textarea></label>
+            </div>
+            <label class="consultation-trap" aria-hidden="true">Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+            <button class="consultation-submit" type="submit">Book a consultation <span aria-hidden="true">↗</span></button>
+            <p class="consultation-note">We’ll securely save your request and email it to the property owner. WhatsApp will also open with your message.</p>
+            <p class="consultation-result" id="consultation-result" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </section>
+      <section class="newsletter content-width"><div><p class="eyebrow">A GOOD PLACE TO BEGIN</p><h2>Your next home is out there.</h2><p>Explore trusted listings and take the next step at your own pace.</p></div><a class="newsletter-cta" href="#recent">Browse properties <span>↗</span></a></section>
+    </main>
+    <footer id="footer"><div class="content-width footer-inner"><a class="brand footer-brand" href="#" aria-label="Pacific Realty Solutions LTD home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M4 16.2 18 5l14 11.2v14.3H21.4v-9.7h-6.8v9.7H4V16.2Z" fill="currentColor"/><path d="M25.2 6.8h4.2v7.1" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span><span class="brand-name">Pacific Realty <span>Solutions LTD</span></span><img class="brand-logo" src="assets/pacific-realty-logo.png" alt="Pacific Realty Solutions LTD logo"></a><p>Helping you find your place in Nigeria.</p><div class="footer-contact"><span class="contact-label">EMAIL US</span><a href="mailto:pacificrealtysolutionltd@gmail.com">pacificrealtysolutionltd@gmail.com</a><a href="mailto:ijiomaruth@gmail.com">ijiomaruth@gmail.com</a></div><div class="footer-contact phone-contact"><span class="contact-label">CALL US</span><a href="tel:+2347065239666">0706 523 9666</a></div><a class="instagram-link" href="https://www.instagram.com/pacific_realty_soltions?xtok=MW54Z3diZXZtMTRuYw%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Follow us on Instagram <span aria-hidden="true">↗</span></a><a class="instagram-link whatsapp-link" href="https://whatsapp.com/channel/0029VbAuD6iJJhzVCTyEMn1A" target="_blank" rel="noopener noreferrer">Join our WhatsApp channel <span aria-hidden="true">↗</span></a><span class="copyright">© 2026 Pacific Realty Solutions LTD. Find a place to call yours.</span><div class="footer-partner"><span>In collaboration with</span><img src="assets/pacific-realty-logo.png" alt="Pacific Realty Solutions LTD" class="footer-partner-logo"><img src="assets/brass-castle-logo.png" alt="Brass Castle Homes and Properties Limited" class="footer-partner-logo"></div></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-client.js"></script>
+    <script src="public-listings.js"></script>
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+  </body>
+</html>
