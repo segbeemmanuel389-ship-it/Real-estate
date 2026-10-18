@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102846">
+    <meta name="description" content="View your Pacific Realty Solutions LTD profile.">
+    <title>My profile — Pacific Realty Solutions LTD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+  <body class="auth-page">
+    <header class="auth-header">
+      <a class="brand" href="../" aria-label="Pacific Realty Solutions LTD home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M4 16.2 18 5l14 11.2v14.3H21.4v-9.7h-6.8v9.7H4V16.2Z" fill="currentColor"/><path d="M25.2 6.8h4.2v7.1" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+        <span class="brand-name">Pacific Realty <span>Solutions LTD</span></span>
+        <img class="brand-logo" src="../assets/pacific-realty-logo.png" alt="">
+      </a>
+      <a class="auth-back-link" href="../">← Back to homes</a>
+    </header>
+    <main class="auth-main">
+      <section id="profile-page" class="auth-card profile-card" aria-labelledby="profile-title">
+        <div class="auth-logo-lockup"><img src="../assets/pacific-realty-logo.png" alt="Pacific Realty Solutions LTD"></div>
+        <p class="eyebrow auth-eyebrow">YOUR ACCOUNT</p>
+        <h1 id="profile-title">My profile</h1>
+        <div class="profile-details">
+          <div><span>Name</span><strong id="profile-name"></strong></div>
+          <div><span>Email address</span><strong id="profile-email"></strong></div>
+        </div>
+        <p class="account-message" role="status" aria-live="polite" hidden></p>
+        <a class="auth-submit profile-home-link" href="../">Browse homes</a>
+        <button class="profile-sign-out" type="button" data-sign-out>Sign out</button>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../supabase-config.js"></script>
+    <script src="../supabase-client.js"></script>
+    <script src="../account.js"></script>
+  </body>
+</html>
