@@ -4,6 +4,24 @@
   const siteRoot = accountScript ? new URL(".", accountScript.src) : new URL("./", window.location.href);
   const siteUrl = (path = "") => new URL(path, siteRoot).href;
 
+  if (document.body.classList.contains("home-auth-pending")) {
+    if (!client) {
+      window.location.replace(siteUrl("login/?authError=unavailable"));
+    } else {
+      client.auth.getSession().then(({ data, error }) => {
+        if (error) throw error;
+        if (!data.session) {
+          window.location.replace(siteUrl("login/"));
+          return;
+        }
+        document.body.classList.remove("home-auth-pending");
+      }).catch((error) => {
+        console.error("Could not verify the homepage authentication session:", error.message);
+        window.location.replace(siteUrl("login/?authError=session"));
+      });
+    }
+  }
+
   function showAccountMessage(message, kind = "error") {
     const messageElement = document.querySelector(".account-message");
     if (!messageElement) {
@@ -136,6 +154,12 @@
     }
     if (params.has("verified")) {
       showAccountMessage("Email verified. Sign in to access your account.", "success");
+    }
+    if (params.get("authError") === "session") {
+      showAccountMessage("We could not verify your sign-in session. Please sign in again.");
+    }
+    if (params.get("authError") === "unavailable") {
+      showAccountMessage("Authentication is not configured. Please contact the site administrator.");
     }
 
     loginForm.addEventListener("submit", async (event) => {
