@@ -56,25 +56,9 @@ document.querySelectorAll(".save-button").forEach((button) => {
   });
 });
 
-document.querySelectorAll(".video-sound-toggle").forEach((button) => {
-  const video = button.closest(".video-home-card")?.querySelector("video");
-  if (!video) return;
-
+document.querySelectorAll(".video-home-player").forEach((video) => {
   video.muted = false;
   video.volume = 1;
-
-  const updateSoundButton = () => {
-    const label = video.muted ? "Turn sound on" : "Mute sound";
-    button.textContent = label;
-    button.setAttribute("aria-label", label);
-    button.setAttribute("aria-pressed", String(!video.muted));
-  };
-
-  video.addEventListener("volumechange", updateSoundButton);
-  button.addEventListener("click", () => {
-    video.muted = !video.muted;
-  });
-  updateSoundButton();
 });
 
 const menuButton = document.querySelector(".menu-toggle");
