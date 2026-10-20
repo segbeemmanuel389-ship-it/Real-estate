@@ -10,6 +10,44 @@
 .brand-logo{display:block;width:56px;height:56px;object-fit:contain;flex:none}
 .brand-mark{width:30px;height:30px;color:var(--blue);display:inline-flex;flex:none}
 .brand-mark svg{width:100%;height:100%}
+.offplan-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;gap:34px;padding:24px;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 8px 28px rgba(20,48,77,.06)}
+.offplan-photo{min-height:100%;overflow:hidden;border-radius:4px;background:#e8edf0}
+.offplan-photo img{display:block;width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center 52%}
+.offplan-copy{align-self:center;padding:12px 10px}
+.offplan-copy .project-location{margin:0 0 12px;color:var(--blue);font-size:10px;font-weight:800;letter-spacing:1.2px}
+.offplan-copy h3{margin:0 0 13px;color:var(--navy);font-size:clamp(22px,2.6vw,32px);line-height:1.2;letter-spacing:-.7px}
+.offplan-copy>p:not(.project-location){margin:0 0 12px;color:#718096;font-size:13px;line-height:1.6}
+.offplan-benefits{display:grid;gap:13px;margin:17px 0 19px;padding:0;list-style:none}
+.offplan-benefits li{display:grid;grid-template-columns:24px 1fr;align-items:start;gap:9px;color:#617184;font-size:12px;line-height:1.55}
+.offplan-benefits li>span:first-child{font-size:17px;line-height:1.25}
+.offplan-benefits strong{color:#243b55}
+.offplan-copy .offplan-question{margin-bottom:18px;color:#40566d;font-weight:600}
+.offplan-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:4px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;transition:background .2s}
+.offplan-cta:hover{background:#095d6c}
+@media(max-width:700px){.offplan-feature{grid-template-columns:1fr;gap:19px;padding:14px}.offplan-photo img{height:auto;min-height:0;aspect-ratio:4/3;object-position:center 55%}.offplan-copy{padding:5px 3px 7px}.offplan-copy h3{font-size:23px}.offplan-benefits{gap:11px}}
+.duplex-feature{overflow:hidden;border:1px solid var(--line);border-radius:6px;background:#fff;box-shadow:0 8px 28px rgba(20,48,77,.06)}
+.duplex-gallery{display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:repeat(2,minmax(180px,1fr));gap:4px;height:480px;background:#fff}
+.duplex-gallery img{display:block;width:100%;height:100%;min-height:0;object-fit:cover}
+.duplex-gallery .duplex-main-photo{grid-row:1 / 3}
+.duplex-details{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:12px 24px;padding:24px 28px}
+.duplex-price{display:flex;flex-direction:column;gap:5px}
+.duplex-price span{color:var(--blue);font-size:9px;font-weight:800;letter-spacing:1.2px}
+.duplex-price strong{color:var(--navy);font-size:27px;letter-spacing:-.7px}
+.duplex-location{margin:0;color:#52677d;font-size:13px;font-weight:700}
+.duplex-description{grid-column:1 / -1;margin:0;color:#718096;font-size:13px;line-height:1.65}
+.duplex-landsize{margin:0;color:#52677d;font-size:12px}
+.duplex-documents{display:grid;gap:7px;margin:0;padding:0;list-style:none;color:#52677d;font-size:11px}
+.duplex-documents li{display:flex;align-items:center;gap:7px}
+.duplex-documents li span{display:inline-grid;width:16px;height:16px;place-items:center;border-radius:50%;background:#e7f5ec;color:#398657;font-size:10px;font-weight:800}
+.duplex-details .offplan-cta{justify-self:start}
+@media(max-width:700px){.duplex-gallery{grid-template-columns:1fr 1fr;grid-template-rows:240px 130px;height:auto}.duplex-gallery .duplex-main-photo{grid-column:1 / -1;grid-row:auto}.duplex-details{grid-template-columns:1fr;gap:12px;padding:20px}.duplex-description{grid-column:auto}.duplex-price strong{font-size:24px}}
+.orchid-feature{margin-top:28px}
+.orchid-photo{height:420px;background:#eef2f4}
+.orchid-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.duplex-details .orchid-title{grid-column:1 / -1;margin:0;color:var(--navy);font-size:19px;line-height:1.35}
+.orchid-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;grid-column:1 / -1;margin:0;padding:0;list-style:none;color:#52677d;font-size:11px;line-height:1.5}
+.orchid-features li:before{content:"✓";margin-right:8px;color:#398657;font-weight:800}
+@media(max-width:700px){.orchid-feature{margin-top:18px}.orchid-photo{height:auto;aspect-ratio:4/3}.duplex-details .orchid-title{grid-column:auto;font-size:17px}.orchid-features{grid-template-columns:1fr;grid-column:auto;gap:7px}}
 .brand-name{font-size:15px;line-height:1.15;letter-spacing:-.35px;white-space:nowrap}
 .footer-brand .brand-logo{width:48px;height:48px}
 .footer-brand .brand-mark{width:25px;height:25px}
